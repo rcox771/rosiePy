@@ -83,13 +83,13 @@ class Rosie:
             time.sleep(t)
             self.brake()
 
-    def forward(self, A=-40, B=40, t=None):
+    def backward(self, A=-40, B=40, t=None):
         self.interp_cmd(A, B)
         if t:
             time.sleep(t)
             self.brake()
 
-    def backward(self, A=40, B=-40, t=None):
+    def forward(self, A=40, B=-40, t=None):
         self.interp_cmd(A, B)
         if t:
             time.sleep(t)
@@ -118,13 +118,13 @@ class Rosie:
         except KeyboardInterrupt:
             self.brake()
 
-    def turn_left(self, A=40, B=40, t=None):
+    def turn_right(self, A=40, B=40, t=None):
         self.interp_cmd(A, B)
         if t:
             time.sleep(t)
             self.brake()
 
-    def turn_right(self, A=-40, B=-40, t=None):
+    def turn_left(self, A=-40, B=-40, t=None):
         self.interp_cmd(A, B)
         if t:
             time.sleep(t)
